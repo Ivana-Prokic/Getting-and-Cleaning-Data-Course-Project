@@ -38,3 +38,5 @@ sub("^f", "Frequency", colnames(DF))
 library(dplyr)
 #Create new data frame called "newDF" which consists of data from data frame "DF" and calculate the average of each measurement for each activity and subject
 newDF <- DF %>% group_by(activity, subject) %>% summarise_each(funs(mean))
+#Print newDF
+newDF
